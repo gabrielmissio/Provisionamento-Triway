@@ -17,7 +17,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:gravity="center"
-        android:text="PROVISIONAMENTO HUAWEI SEM WIFI EG88888"
+        android:text="PROVISIONAMENTO HUAWEI SEM WIFI EG8120L"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"

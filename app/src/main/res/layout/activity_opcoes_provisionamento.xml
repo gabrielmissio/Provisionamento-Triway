@@ -17,7 +17,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:gravity="center"
-        android:text="PROVISIONAMENTO HUAWEI COM WIFI"
+        android:text="PROVISIONAMENTO HUAWEI COM WIFI EG8145V5"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
