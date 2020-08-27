@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".provisionamentosemwifi.ProvisionamentoSemWifi"
+    android:id="@+id/root_layout_sem_wifi"
+    >
+
+    <WebView
+        android:id="@+id/web_view_sem_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6" />
+
+    <Button
+        android:id="@+id/buttonnext_sem_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:onClick="nextButton"
+        android:text="Teste"
+        android:textColor="@android:color/background_light" />
+
+
+</LinearLayout>
