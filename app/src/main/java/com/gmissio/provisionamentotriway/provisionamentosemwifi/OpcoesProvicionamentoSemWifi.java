@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.R;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
@@ -65,6 +66,11 @@ public class OpcoesProvicionamentoSemWifi extends AppCompatActivity implements D
 //            startActivity(intent);
         }
 
+    }
+
+    public void TestarConectividade(View view){
+        Intent intent = new Intent(this, Conectividade.class);
+        startActivity(intent);
     }
 
     @Override

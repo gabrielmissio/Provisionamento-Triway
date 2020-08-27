@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.R;
 
 public class OpcoesProvisionamento8120l5 extends AppCompatActivity {
@@ -18,6 +19,11 @@ public class OpcoesProvisionamento8120l5 extends AppCompatActivity {
 
     public void RouterIPv4IPv6A(View view){
         Intent intent = new Intent(this, Provisionamento8120l5.class);
+        startActivity(intent);
+    }
+
+    public void TestarConectividade(View view){
+        Intent intent = new Intent(this, Conectividade.class);
         startActivity(intent);
     }
 
