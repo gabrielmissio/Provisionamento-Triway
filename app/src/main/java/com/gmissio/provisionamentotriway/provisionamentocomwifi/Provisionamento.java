@@ -318,13 +318,6 @@ public class Provisionamento extends AppCompatActivity {
                 "comboPolicy = document.getElementById('PriorityPolicy'); comboPolicy.selectedIndex = 1;" +
                 "document.getElementById('UserName').value='"+username+"';" +
                 "document.getElementById('Password').value='"+password+"';" +
-              //  "checkLcp = document.getElementById('LcpEchoReqCheck'); checkLcp.checked = true;" +
-//                "checkLan1 = document.getElementById('IPv4BindLanList1'); checkLan1.checked = true;" +
-//                "checkLan2 = document.getElementById('IPv4BindLanList2'); checkLan2.checked = true;" +
-//                "checkLan3 = document.getElementById('IPv4BindLanList3'); checkLan3.checked = true;" +
-//                "checkLan4 = document.getElementById('IPv4BindLanList4'); checkLan4.checked = true;" +
-//                "checkSsid1 = document.getElementById('IPv4BindLanList9'); checkSsid1.checked = true;" +
-//                "checkSsid5 = document.getElementById('IPv4BindLanList13'); checkSsid5.checked = true;" +
                 "document.getElementById('ButtonApply').click();" +
                 "";
 

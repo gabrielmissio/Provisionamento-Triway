@@ -7,6 +7,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gmissio.provisionamentotriway.eg8120l5.OpcoesProvisionamento8120l5;
 import com.gmissio.provisionamentotriway.provisionamentocomwifi.OpcoesProvicionamento;
 import com.gmissio.provisionamentotriway.provisionamentosemwifi.OpcoesProvicionamentoSemWifi;
 
@@ -44,5 +45,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, OpcoesProvicionamentoSemWifi.class);
         startActivity(intent);
     }
+
+    public void OpcoesProvicionamentoEg8120l5(View view){
+        Intent intent = new Intent(this, OpcoesProvisionamento8120l5.class);
+        startActivity(intent);
+    }
+
 
 }

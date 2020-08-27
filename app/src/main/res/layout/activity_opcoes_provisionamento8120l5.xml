@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ECF0F1"
-    tools:context=".provisionamentocomwifi.OpcoesProvicionamento">
-
+    tools:context=".eg8120l5.OpcoesProvisionamento8120l5">
 
     <TextView
         android:id="@+id/textView"
@@ -17,7 +16,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:gravity="center"
-        android:text="PROVISIONAMENTO HUAWEI COM WIFI"
+        android:text="PROVISIONAMENTO HUAWEI SEM WIFI EG8120l5"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -41,28 +40,18 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="@color/colorPrimary"
-        android:onClick="RouterIPv4IPv6"
+        android:onClick="RouterIPv4IPv6A"
         android:text="CLIENTE PPPOE"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:background="@color/colorPrimary"
-        android:onClick="ConfigSsidPassword"
-        android:text="CONFIGURAR WIFI"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

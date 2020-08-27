@@ -79,6 +79,7 @@
         android:layout_marginRight="24dp"
         android:layout_marginBottom="12dp"
         android:background="@color/colorAccent"
+        android:onClick="OpcoesProvicionamentoEg8120l5"
         android:text="Novo modelo"
         android:textColor="@color/ic_launcher_background"
         app:layout_constraintBottom_toTopOf="@+id/button4"
