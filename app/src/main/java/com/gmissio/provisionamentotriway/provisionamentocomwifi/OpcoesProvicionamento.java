@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.R;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoEmergencia;
 import com.gmissio.provisionamentotriway.diologs.DiologSsidPassword;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 
 public class OpcoesProvicionamento extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener {
@@ -29,7 +30,7 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
         setContentView(R.layout.activity_opcoes_provisionamento);
 
         textView = findViewById(R.id.textView);
-        emergence = findViewById(R.id.button);
+        emergence = findViewById(R.id.button3);
 
         emergence.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -44,6 +45,11 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
 
 
     }
+    public void TestarConectividade(View view){
+        Intent intent = new Intent(this, Conectividade.class);
+        startActivity(intent);
+    }
+
     public void ConfigSsidPassword(View view){
         DiologSsidPassword diologProvisionamento = new DiologSsidPassword();
         diologProvisionamento.show(getSupportFragmentManager(), "diolog ssid e password");

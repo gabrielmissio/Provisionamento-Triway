@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".eg8120l5.OpcoesProvisionamento8120l5"></activity>
+        <activity android:name=".Conectividade.Conectividade"></activity>
+        <activity android:name=".eg8120l5.OpcoesProvisionamento8120l5" />
         <activity android:name=".eg8120l5.Provisionamento8120l5" />
         <activity android:name=".provisionamentosemwifi.OpcoesProvicionamentoSemWifi" />
         <activity android:name=".provisionamentosemwifi.ProvisionamentoSemWifi" />
