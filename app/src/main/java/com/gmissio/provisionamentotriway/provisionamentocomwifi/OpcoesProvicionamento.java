@@ -126,6 +126,5 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
             intent.putExtra("vlan", vlan);
             startActivity(intent);
         }
-
     }
 }

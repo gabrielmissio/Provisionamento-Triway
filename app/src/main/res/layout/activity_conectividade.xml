@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Conectividade.Conectividade">
+    android:orientation="vertical"
+    tools:context=".Conectividade.Conectividade"
+    android:id="@+id/root_layout_conectividade"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <WebView
+        android:id="@+id/web_view_conectividade"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        />
+
+    <Button
+        android:id="@+id/buttonnext_conectividade"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:text="TESTE DE CONECTIVIDADE"
+        android:textColor="@android:color/background_light" />
+
+
+</LinearLayout>
+
