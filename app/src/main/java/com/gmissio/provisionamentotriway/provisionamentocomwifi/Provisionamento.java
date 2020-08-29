@@ -613,6 +613,7 @@ public class Provisionamento extends AppCompatActivity {
                 "comboPrimarySNTP = document.getElementById('ntpServer1'); comboPrimarySNTP.selectedIndex = 9;" +
                 "comboSecondarySNTP = document.getElementById('ntpServer2'); comboSecondarySNTP.selectedIndex = 8;" +
                 "comboWan = document.getElementById('WanName'); comboWan.selectedIndex = 1;" +
+                "comboTimeZone = document.getElementById('cboTimeZone'); comboTimeZone.selectedIndex = 19;" +
                 "SubmitForm();" +
                 //   "confirm();" +
                 "";

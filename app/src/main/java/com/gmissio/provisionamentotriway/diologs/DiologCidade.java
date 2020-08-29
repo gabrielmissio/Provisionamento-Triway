@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class DiologCidade extends AppCompatDialogFragment {
 
-    public int vlan = 284;
+    public int vlan = 160;
     private TesteDiologListener listener;
 
     @NonNull
@@ -23,7 +23,7 @@ public class DiologCidade extends AppCompatDialogFragment {
 
         builder.setTitle("CIDADE");
         // add a radio button list
-        String[] animals = {"ARROIO GRANDE","BOA VISTA DO INCRA","CAMPOS BORGES","CARAZINHO","CONDOR","COTOVELO","CRUZ ALTA","ERNESTINA","ESPUMOSO","FORTALEZA DOS VALOS","GENTIL","IBIRUBA","MARAU","MATO CASTELHANO","NAO ME TOQUE","PANAMBI","PASSO FUNDO","PEJUCARA","PONTAO","SANTA BARBARA DO SUL","SELBACH","TAPEJARA","TAPERA","TIO HUGO","VICTOR GRAEFF","XV DE NOVEMBRO"};
+        String[] animals = {"ARROIO GRANDE","BOA VISTA DO INCRA","CAMPOS BORGES","CARAZINHO","CONDOR","COTOVELO","CRUZ ALTA","ERNESTINA","ESPUMOSO","FORTALEZA DOS VALOS","GENTIL","IBIRUBA","MARAU","MATO CASTELHANO","NAO ME TOQUE","PANAMBI","PASSO FUNDO","PEJUCARA","PONTAO","SANTA BARBARA DO SUL","SELBACH","TAPEJARA","TAPERA","TIO HUGO","VICTOR GRAEFF","XV DE NOVEMBRO","LAGOA DOS TRES CANTOS"};
         final int checkedItem = 0; // boa vista
         builder.setSingleChoiceItems(animals, checkedItem, new DialogInterface.OnClickListener() {
             @Override
@@ -134,6 +134,8 @@ public class DiologCidade extends AppCompatDialogFragment {
                         vlan = 269;
                         break;
                     case 26:
+                        //lagoa
+                        vlan = 13;
                         break;
                 }
             }

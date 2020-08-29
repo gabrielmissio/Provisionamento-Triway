@@ -185,6 +185,15 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
                 intent8120l5.putExtra("vlan", this.vlan);
                 startActivity(intent8120l5);
                 break;
+            case 4:
+                Toast t8245h5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8245H5",Toast.LENGTH_SHORT);//.show();
+                t8245h5.show();
+                Intent intent8245h5 = new Intent(this, Provisionamento.class);
+                intent8245h5.putExtra("username", user);
+                intent8245h5.putExtra("password", pass);
+                intent8245h5.putExtra("vlan", this.vlan);
+                startActivity(intent8245h5);
+                break;
         }
 
     }

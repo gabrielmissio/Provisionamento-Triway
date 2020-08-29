@@ -23,23 +23,27 @@ public class Modelo extends AppCompatDialogFragment {
 
         builder.setTitle("MODELO");
         // add a radio button list
-        String[] animals = {"EG8145V5 COM  WIFI", "EG8120L SEM WIFI", "EG8120L5 SEM WIFI"};
+        String[] animals = {"EG8145V5 COM  WIFI", "EG8120L SEM WIFI", "EG8120L5 SEM WIFI", "EG8245H5 SEM WIFI"};
         final int checkedItem = 0; // boa vista
         builder.setSingleChoiceItems(animals, checkedItem, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 switch (which){
                     case 0:
-                        //arroio grande
+                        //EG8145V5
                         vlan = 1;
                         break;
                     case 1:
-                        //boa vista
+                        //EG8120L
                         vlan = 2;
                         break;
                     case 2:
-                        //campos borges
+                        //EG8120L5
                         vlan = 3;
+                        break;
+                    case 3:
+                        //EG8245H5
+                        vlan = 4;
                         break;
                 }
             }

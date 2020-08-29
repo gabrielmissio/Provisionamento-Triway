@@ -21,6 +21,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/colorPrimary"
+        android:onClick="nextButton"
         android:text="WAN Configuration"
         android:textColor="@android:color/background_light" />
 

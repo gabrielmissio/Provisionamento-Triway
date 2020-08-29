@@ -38,6 +38,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
     private String username;
     private String password;
     private String vlan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
         nextButton = findViewById(R.id.buttonnext_8120l5);
         nextButton.setText(statusButton);
         mContext = getApplicationContext();
-        mActivity = com.gmissio.provisionamentotriway.eg8120l5.Provisionamento8120l5.this;
+        mActivity = Provisionamento8120l5.this;
 
         mRootLayout = findViewById(R.id.root_layout_8120l5);
         mWebView = findViewById(R.id.web_view_8120l5);
@@ -88,10 +89,10 @@ public class Provisionamento8120l5 extends AppCompatActivity {
         });
 
         //setar username, password a vlan id
-//        Bundle extras = getIntent().getExtras();
-//        username = extras.getString("username");
-//        password = extras.getString("password");
-//        vlan = extras.getString("vlan");
+        Bundle extras = getIntent().getExtras();
+        username = extras.getString("username");
+        password = extras.getString("password");
+        vlan = extras.getString("vlan");
 
         nextButton.setEnabled(false);
         new android.os.Handler().postDelayed(
@@ -174,7 +175,6 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                 return true;
             }
         });
-
     }//fim onCreate
 
     public void provicionamentoRapido(){
@@ -217,7 +217,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        10000);
+                        16000);
                 break;
             case 3:
                 statusButton = "DHCP";
@@ -282,7 +282,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        8000);
+                        10000);
                 break;
             case 8:
                 statusButton = "SALVAR CONFIGURAÇÕES";
@@ -352,16 +352,18 @@ public class Provisionamento8120l5 extends AppCompatActivity {
 
         mWebView.loadUrl(url);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.setWebChromeClient(new WebChromeClient());
+
 
         final String js = "javascript: " +
-                "checkAcess = document.getElementById('portaclwhite').checked = true;" +
+               // "checkAcess = document.getElementById('portaclwhite').checked = true;" +
                 "clickAdd('PortAclConfigList_head');" +
-                "comboPortType = document.getElementById('PortType'); comboPortType.selectedIndex = 2;" +
-                "comboNameList = document.getElementById('WanNameList');" +
-                "checkTelnet = document.getElementById('Protocol1'); checkTelnet.checked = true;" +
-                "checkHttp = document.getElementById('Protocol2'); checkHttp.checked = true;" +
-                "checkSsh = document.getElementById('Protocol3'); checkSsh.checked = true;" +
-                " SubmitForm();" +
+                    "comboPortType = document.getElementById('PortType'); comboPortType.selectedIndex = 1;" +
+                    "document.getElementById('priority').value='1';" +
+                    "checkTelnet = document.getElementById('Protocol1'); checkTelnet.checked = true;" +
+                    "checkHttp = document.getElementById('Protocol2'); checkHttp.checked = true;" +
+                    "checkSsh = document.getElementById('Protocol3'); checkSsh.checked = true;" +
+                    "document.getElementById('btnApply_ex').click();" +
                 "";
 
         mWebView.setWebViewClient(new WebViewClient(){
@@ -428,8 +430,8 @@ public class Provisionamento8120l5 extends AppCompatActivity {
         final String js = "javascript: " +
                 "checLan1 = document.getElementById('cb_Lan1'); checLan1.checked = true;" +
                 "checLan2 = document.getElementById('cb_Lan2'); checLan2.checked = true;" +
-                "checLan3 = document.getElementById('cb_Lan3'); checLan3.checked = true;" +
-                "checLan4 = document.getElementById('cb_Lan4'); checLan4.checked = true;" +
+//                "checLan3 = document.getElementById('cb_Lan3'); checLan3.checked = true;" +
+//                "checLan4 = document.getElementById('cb_Lan4'); checLan4.checked = true;" +
                 "document.getElementById('Apply').click();" +
                 "";
 
@@ -617,6 +619,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                 "comboPrimarySNTP = document.getElementById('ntpServer1'); comboPrimarySNTP.selectedIndex = 9;" +
                 "comboSecondarySNTP = document.getElementById('ntpServer2'); comboSecondarySNTP.selectedIndex = 8;" +
                 "comboWan = document.getElementById('WanName'); comboWan.selectedIndex = 1;" +
+                "comboTimeZone = document.getElementById('cboTimeZone'); comboTimeZone.selectedIndex = 19;" +
                 "SubmitForm();" +
                 //   "confirm();" +
                 "";
