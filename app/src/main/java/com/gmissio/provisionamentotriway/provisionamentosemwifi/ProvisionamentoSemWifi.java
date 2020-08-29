@@ -137,6 +137,18 @@ public class ProvisionamentoSemWifi extends AppCompatActivity {
                         statusScript++;
                         break;
                     case 5:
+                        statusButton = "HABILITAR LOGS";
+                        nextButton.setText(statusButton);
+                        HabilitarLogs1();
+                        statusScript++;
+                        break;
+                    case 6:
+                        statusButton = "HABILITAR LOGS";
+                        nextButton.setText(statusButton);
+                        HabilitarLogs2();
+                        statusScript++;
+                        break;
+                    case 7:
                         statusButton = "SALVAR CONFIGURAÇÕES";
                         nextButton.setText(statusButton);
                         SalvarConfiguracoes();
@@ -222,7 +234,34 @@ public class ProvisionamentoSemWifi extends AppCompatActivity {
                         },
                         12000);
                 break;
+
             case 5:
+                statusButton = "HABILITAR LOGS";
+                nextButton.setText(statusButton);
+                HabilitarLogs1();
+                statusScript++;
+                new android.os.Handler().postDelayed(
+                        new Runnable() {
+                            public void run() {
+                                provicionamentoRapido();
+                            }
+                        },
+                        8000);
+                break;
+            case 6:
+                statusButton = "HABILITAR LOGS";
+                nextButton.setText(statusButton);
+                HabilitarLogs2();
+                statusScript++;
+                new android.os.Handler().postDelayed(
+                        new Runnable() {
+                            public void run() {
+                                provicionamentoRapido();
+                            }
+                        },
+                        10000);
+                break;
+            case 7:
                 statusButton = "SALVAR CONFIGURAÇÕES";
                 nextButton.setText(statusButton);
                 SalvarConfiguracoes();
@@ -459,6 +498,85 @@ public class ProvisionamentoSemWifi extends AppCompatActivity {
             }
         });
     }
+
+    public void HabilitarLogs1(){
+        /**/
+        mContext = getApplicationContext();
+        mActivity = ProvisionamentoSemWifi.this;
+
+        mRootLayout = findViewById(R.id.root_layout_sem_wifi);
+        mWebView = findViewById(R.id.web_view_ssid_password);
+
+        String url = "http://192.168.18.1/html/ssmp/sntp/sntp.asp";//192.16.0.1
+
+        mWebView.loadUrl(url);
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.setWebChromeClient(new WebChromeClient());
+
+
+        final String js = "javascript: " +
+                "check = document.getElementById('ntpEnabled');" +
+                "if(check.checked == false){" +
+                "check.click();" +
+                "SubmitForm();" +
+                "}"+
+                //   "confirm();" +
+                "";
+
+        mWebView.setWebViewClient(new WebViewClient(){
+
+            public void onPageFinished(WebView view, String url){
+                if(Build.VERSION.SDK_INT >= 19){
+                    view.evaluateJavascript(js, new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String s) {
+                        }
+                    });
+                }
+
+            }
+        });
+    }
+
+    public void HabilitarLogs2(){
+        /**/
+        mContext = getApplicationContext();
+        mActivity = ProvisionamentoSemWifi.this;
+
+        mRootLayout = findViewById(R.id.root_layout_sem_wifi);
+        mWebView = findViewById(R.id.web_view_sem_wifi);
+
+        String url = "http://192.168.18.1/html/ssmp/sntp/sntp.asp";//192.16.0.1
+
+        mWebView.loadUrl(url);
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.setWebChromeClient(new WebChromeClient());
+
+
+        final String js = "javascript: " +
+                "comboPrimarySNTP = document.getElementById('ntpServer1'); comboPrimarySNTP.selectedIndex = 9;" +
+                "comboSecondarySNTP = document.getElementById('ntpServer2'); comboSecondarySNTP.selectedIndex = 8;" +
+                "comboWan = document.getElementById('WanName'); comboWan.selectedIndex = 1;" +
+                "comboTimeZone = document.getElementById('cboTimeZone'); comboTimeZone.selectedIndex = 19;" +
+                "SubmitForm();" +
+                //   "confirm();" +
+                "";
+
+        mWebView.setWebViewClient(new WebViewClient(){
+
+            public void onPageFinished(WebView view, String url){
+                if(Build.VERSION.SDK_INT >= 19){
+                    view.evaluateJavascript(js, new ValueCallback<String>() {
+                        @Override
+                        public void onReceiveValue(String s) {
+                        }
+                    });
+                }
+
+            }
+        });
+    }
+
 
 
 }
