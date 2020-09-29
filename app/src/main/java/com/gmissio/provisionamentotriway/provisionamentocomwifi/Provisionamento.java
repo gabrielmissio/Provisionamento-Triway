@@ -252,7 +252,7 @@ public class Provisionamento extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        10000);
+                        15000);
                 break;
             case 6:
                 statusButton = "HABILITAR LOGS";

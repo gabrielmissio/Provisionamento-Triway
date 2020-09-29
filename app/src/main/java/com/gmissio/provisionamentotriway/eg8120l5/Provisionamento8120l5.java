@@ -256,7 +256,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        10000);
+                        15000);
                 break;
             case 6:
                 statusButton = "HABILITAR LOGS";
@@ -269,7 +269,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        8000);
+                        12000);
                 break;
             case 7:
                 statusButton = "HABILITAR LOGS";
@@ -282,7 +282,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        10000);
+                        12000);
                 break;
             case 8:
                 statusButton = "SALVAR CONFIGURAÇÕES";
