@@ -217,7 +217,7 @@ public class Provisionamento8120l5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        16000);
+                        35000);
                 break;
             case 3:
                 statusButton = "DHCP";

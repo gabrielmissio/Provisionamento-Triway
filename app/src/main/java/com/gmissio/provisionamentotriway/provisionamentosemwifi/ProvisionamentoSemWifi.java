@@ -47,7 +47,7 @@ public class ProvisionamentoSemWifi extends AppCompatActivity {
         mRootLayout = findViewById(R.id.root_layout_sem_wifi);
         mWebView = findViewById(R.id.web_view_sem_wifi);
 
-        String url = "http://192.168.18.1";//192.16.0.1
+        String url = "http://192.168.18.1/html/bbsp/layer3/layer3.asp";//192.16.0.1
 
         mWebView.loadUrl(url);
         mWebView.getSettings().setJavaScriptEnabled(true);
@@ -505,7 +505,7 @@ public class ProvisionamentoSemWifi extends AppCompatActivity {
         mActivity = ProvisionamentoSemWifi.this;
 
         mRootLayout = findViewById(R.id.root_layout_sem_wifi);
-        mWebView = findViewById(R.id.web_view_ssid_password);
+        mWebView = findViewById(R.id.web_view_sem_wifi);
 
         String url = "http://192.168.18.1/html/ssmp/sntp/sntp.asp";//192.16.0.1
 
