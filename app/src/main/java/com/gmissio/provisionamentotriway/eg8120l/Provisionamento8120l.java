@@ -37,7 +37,7 @@ public class Provisionamento8120l extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_provisionamento_sem_wifi);
+        setContentView(R.layout.activity_provisionamento8120l);
 
         nextButton = findViewById(R.id.buttonnext_sem_wifi);
         nextButton.setText(statusButton);

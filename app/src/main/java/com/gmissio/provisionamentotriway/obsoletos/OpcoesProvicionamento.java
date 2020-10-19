@@ -29,7 +29,7 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opcoes_provisionamento);
+        setContentView(R.layout.obsoleto_activity_opcoes_provisionamento8145v5);
 
         textView = findViewById(R.id.textView);
         emergence = findViewById(R.id.button3);

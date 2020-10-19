@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".eg8145v5.Provisionamento8145v5"
-    android:id="@+id/root_layout"
+    tools:context=".eg8245w5.Provisionamento8245w5"
+
+    android:id="@+id/root_layout_8245w5"
     >
 
     <WebView
-        android:id="@+id/web_view"
+        android:id="@+id/web_view_8245w5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6"
         />
 
     <Button
-        android:id="@+id/buttonnext"
+        android:id="@+id/buttonnext_8245w5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

@@ -27,7 +27,7 @@ public class OpcoesProvicionamentoSemWifi extends AppCompatActivity implements D
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opcoes_provisionamento_sem_wifi);
+        setContentView(R.layout.obsoleto_activity_opcoes_provisionamento8120l);
 
         textView = findViewById(R.id.textView);
         emergence = findViewById(R.id.button);

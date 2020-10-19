@@ -21,7 +21,10 @@
         <activity android:name=".eg8145v5.SsidPassword" />
         <activity android:name=".eg8145v5.Provisionamento8145v5" />
         <activity android:name=".obsoletos.OpcoesProvicionamento" />
+        <activity android:name=".eg8245w5.Provisionamento8245w5" />
+
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

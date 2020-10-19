@@ -1,4 +1,4 @@
-package com.gmissio.provisionamentotriway.eg8145v5;
+package com.gmissio.provisionamentotriway.eg8245w5;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,7 +20,7 @@ import com.gmissio.provisionamentotriway.R;
 //import android.support.v7.app.AppCompatActivity;
 
 
-public class Provisionamento8145v5 extends AppCompatActivity {
+public class Provisionamento8245w5 extends AppCompatActivity {
 
 
     private Context mContext;
@@ -37,15 +37,15 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_provisionamento8145v5);
+        setContentView(R.layout.activity_provisionamento8245w5);
 
-        nextButton = findViewById(R.id.buttonnext);
+        nextButton = findViewById(R.id.buttonnext_8245w5);
         nextButton.setText(statusButton);
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/wan/wan.asp";//192.16.0.1
 
@@ -213,7 +213,7 @@ public class Provisionamento8145v5 extends AppCompatActivity {
                                 provicionamentoRapido();
                             }
                         },
-                        15000);
+                        35000);
                 break;
             case 3:
                 statusButton = "DHCP";
@@ -298,10 +298,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void WanConfiguration(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/wan/wan.asp";//192.16.0.1
 
@@ -339,10 +339,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void RemoteAcess(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/portacl/newacl.asp";//192.16.0.1
 
@@ -379,10 +379,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void RemoteAcessCombo(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/portacl/newacl.asp";//192.16.0.1
 
@@ -412,10 +412,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void LanPorts(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/layer3/layer3.asp";//192.16.0.1
 
@@ -448,10 +448,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void DhcpOnt(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/dhcpservercfg/dhcp2.asp";//192.16.0.1
 
@@ -484,10 +484,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void DhcpOntv6(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/bbsp/lanaddress/lanaddress.asp";//192.16.0.1
 
@@ -524,10 +524,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void SalvarConfiguracoes(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/ssmp/cfgfile/cfgfile.asp";//192.16.0.1
 
@@ -559,10 +559,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void HabilitarLogs1(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/ssmp/sntp/sntp.asp";//192.16.0.1
 
@@ -598,10 +598,10 @@ public class Provisionamento8145v5 extends AppCompatActivity {
     public void HabilitarLogs2(){
         /**/
         mContext = getApplicationContext();
-        mActivity = Provisionamento8145v5.this;
+        mActivity = Provisionamento8245w5.this;
 
-        mRootLayout = findViewById(R.id.root_layout);
-        mWebView = findViewById(R.id.web_view);
+        mRootLayout = findViewById(R.id.root_layout_8245w5);
+        mWebView = findViewById(R.id.web_view_8245w5);
 
         String url = "http://192.168.18.1/html/ssmp/sntp/sntp.asp";//192.16.0.1
 

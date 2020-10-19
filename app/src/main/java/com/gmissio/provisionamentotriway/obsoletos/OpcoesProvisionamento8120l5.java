@@ -15,7 +15,7 @@ public class OpcoesProvisionamento8120l5 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opcoes_provisionamento8120l5);
+        setContentView(R.layout.obsoleto_activity_opcoes_provisionamento8120l5);
     }
 
     public void RouterIPv4IPv6A(View view){
