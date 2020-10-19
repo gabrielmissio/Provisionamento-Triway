@@ -10,16 +10,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
+import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoEmergencia;
 import com.gmissio.provisionamentotriway.diologs.DiologSsidPassword;
 import com.gmissio.provisionamentotriway.diologs.Modelo;
 import com.gmissio.provisionamentotriway.eg8120l5.Provisionamento8120l5;
-import com.gmissio.provisionamentotriway.provisionamentocomwifi.Provisionamento;
-import com.gmissio.provisionamentotriway.provisionamentocomwifi.SsidPassword;
-import com.gmissio.provisionamentotriway.provisionamentosemwifi.ProvisionamentoSemWifi;
+import com.gmissio.provisionamentotriway.eg8145v5.Provisionamento8145v5;
+import com.gmissio.provisionamentotriway.eg8145v5.SsidPassword;
+import com.gmissio.provisionamentotriway.eg8120l.Provisionamento8120l;
 
 public class MainActivity extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener, Modelo.TesteDiologListener {
 
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             case 1:
                 Toast t8145V5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8145V5",Toast.LENGTH_SHORT);//.show();
                 t8145V5.show();
-                Intent intent8145v5 = new Intent(this, Provisionamento.class);
+                Intent intent8145v5 = new Intent(this, Provisionamento8145v5.class);
                 intent8145v5.putExtra("username", user);
                 intent8145v5.putExtra("password", pass);
                 intent8145v5.putExtra("vlan", this.vlan);
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             case 2:
                 Toast t8120l = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8120L",Toast.LENGTH_SHORT);//.show();
                 t8120l.show();
-                Intent intent8120l = new Intent(this, ProvisionamentoSemWifi.class);
+                Intent intent8120l = new Intent(this, Provisionamento8120l.class);
                 intent8120l.putExtra("username", user);
                 intent8120l.putExtra("password", pass);
                 intent8120l.putExtra("vlan", this.vlan);
@@ -188,11 +188,20 @@ public class MainActivity extends AppCompatActivity implements DiologProvisionam
             case 4:
                 Toast t8245h5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8245H5",Toast.LENGTH_SHORT);//.show();
                 t8245h5.show();
-                Intent intent8245h5 = new Intent(this, Provisionamento.class);
+                Intent intent8245h5 = new Intent(this, Provisionamento8145v5.class);
                 intent8245h5.putExtra("username", user);
                 intent8245h5.putExtra("password", pass);
                 intent8245h5.putExtra("vlan", this.vlan);
                 startActivity(intent8245h5);
+                break;
+            case 5:
+                Toast t8245w5 = Toast.makeText(getApplicationContext(),"PROVISIONAMENTO EG8245W5",Toast.LENGTH_SHORT);//.show();
+                t8245w5.show();
+                Intent intent8245w5 = new Intent(this, Provisionamento8145v5.class);
+                intent8245w5.putExtra("username", user);
+                intent8245w5.putExtra("password", pass);
+                intent8245w5.putExtra("vlan", this.vlan);
+                startActivity(intent8245w5);
                 break;
         }
 

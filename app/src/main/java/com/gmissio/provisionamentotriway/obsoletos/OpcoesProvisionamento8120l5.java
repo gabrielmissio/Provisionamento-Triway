@@ -1,4 +1,4 @@
-package com.gmissio.provisionamentotriway.eg8120l5;
+package com.gmissio.provisionamentotriway.obsoletos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
+import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.R;
+import com.gmissio.provisionamentotriway.eg8120l5.Provisionamento8120l5;
 
 public class OpcoesProvisionamento8120l5 extends AppCompatActivity {
 

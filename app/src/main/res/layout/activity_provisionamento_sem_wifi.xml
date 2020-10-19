@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".provisionamentosemwifi.ProvisionamentoSemWifi"
+    tools:context=".eg8120l.Provisionamento8120l"
     android:id="@+id/root_layout_sem_wifi"
     >
 

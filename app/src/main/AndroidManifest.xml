@@ -13,14 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Conectividade.Conectividade"></activity>
-        <activity android:name=".eg8120l5.OpcoesProvisionamento8120l5" />
+        <activity android:name=".conectividade.Conectividade"></activity>
+        <activity android:name=".obsoletos.OpcoesProvisionamento8120l5" />
         <activity android:name=".eg8120l5.Provisionamento8120l5" />
-        <activity android:name=".provisionamentosemwifi.OpcoesProvicionamentoSemWifi" />
-        <activity android:name=".provisionamentosemwifi.ProvisionamentoSemWifi" />
-        <activity android:name=".provisionamentocomwifi.SsidPassword" />
-        <activity android:name=".provisionamentocomwifi.Provisionamento" />
-        <activity android:name=".provisionamentocomwifi.OpcoesProvicionamento" />
+        <activity android:name=".obsoletos.OpcoesProvicionamentoSemWifi" />
+        <activity android:name=".eg8120l.Provisionamento8120l" />
+        <activity android:name=".eg8145v5.SsidPassword" />
+        <activity android:name=".eg8145v5.Provisionamento8145v5" />
+        <activity android:name=".obsoletos.OpcoesProvicionamento" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

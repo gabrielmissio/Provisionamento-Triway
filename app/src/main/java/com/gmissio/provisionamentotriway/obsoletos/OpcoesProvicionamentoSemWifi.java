@@ -1,4 +1,4 @@
-package com.gmissio.provisionamentotriway.provisionamentocomwifi;
+package com.gmissio.provisionamentotriway.obsoletos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,28 +9,28 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gmissio.provisionamentotriway.Conectividade.Conectividade;
+import com.gmissio.provisionamentotriway.conectividade.Conectividade;
 import com.gmissio.provisionamentotriway.R;
 import com.gmissio.provisionamentotriway.diologs.DiologCidade;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamento;
 import com.gmissio.provisionamentotriway.diologs.DiologProvisionamentoEmergencia;
 import com.gmissio.provisionamentotriway.diologs.DiologSsidPassword;
+import com.gmissio.provisionamentotriway.eg8120l.Provisionamento8120l;
 
 
-public class OpcoesProvicionamento extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener {
+public class OpcoesProvicionamentoSemWifi extends AppCompatActivity implements DiologProvisionamento.DiologProvisionamentoListener, DiologSsidPassword.DiologProvisionamentoListener, DiologCidade.TesteDiologListener, DiologProvisionamentoEmergencia.DiologProvisionamentoListener {
 
     private Button emergence;
     private  String user;
     private  String pass;
     private TextView textView;
-    private Button teste;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opcoes_provisionamento);
+        setContentView(R.layout.activity_opcoes_provisionamento_sem_wifi);
 
         textView = findViewById(R.id.textView);
-        emergence = findViewById(R.id.button3);
+        emergence = findViewById(R.id.button);
 
         emergence.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -42,17 +42,6 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
                 return true;
             }
         });
-
-
-    }
-    public void TestarConectividade(View view){
-        Intent intent = new Intent(this, Conectividade.class);
-        startActivity(intent);
-    }
-
-    public void ConfigSsidPassword(View view){
-        DiologSsidPassword diologProvisionamento = new DiologSsidPassword();
-        diologProvisionamento.show(getSupportFragmentManager(), "diolog ssid e password");
 
     }
 
@@ -79,19 +68,14 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
 
     }
 
+    public void TestarConectividade(View view){
+        Intent intent = new Intent(this, Conectividade.class);
+        startActivity(intent);
+    }
+
     @Override
     public void pegarTextos(String ssid2, String password2, String ssid5, String password5) {
-        Intent intent = new Intent(this, SsidPassword.class);
-        if (ssid2.isEmpty() || password2.isEmpty() || ssid5.isEmpty() || password5.isEmpty()){
-            Toast t = Toast.makeText(getApplicationContext(),"CAMPOS INVALIDOS",Toast.LENGTH_SHORT);//.show();
-            t.show();
-        }else {
-            intent.putExtra("ssid2", ssid2);
-            intent.putExtra("password2", password2);
-            intent.putExtra("ssid5", ssid5);
-            intent.putExtra("password5", password5);
-            startActivity(intent);
-        }
+
     }
     public void diologCidade() {
         DiologCidade diologProvisionamento = new DiologCidade();
@@ -102,7 +86,7 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
     public void aplicarCidade(int vlan) {
         try{
             String vlanid = String.valueOf(vlan);
-            Intent intent = new Intent(this, Provisionamento.class);
+            Intent intent = new Intent(this, Provisionamento8120l.class);
             intent.putExtra("username", user);
             intent.putExtra("password", pass);
             intent.putExtra("vlan", vlanid);
@@ -120,11 +104,12 @@ public class OpcoesProvicionamento extends AppCompatActivity implements DiologPr
             Toast t = Toast.makeText(getApplicationContext(),"CAMPOS INVALIDOS",Toast.LENGTH_SHORT);//.show();
             t.show();
         }else {
-            Intent intent = new Intent(this, Provisionamento.class);
+            Intent intent = new Intent(this, Provisionamento8120l.class);
             intent.putExtra("username", username);
             intent.putExtra("password", password);
             intent.putExtra("vlan", vlan);
             startActivity(intent);
         }
+
     }
 }

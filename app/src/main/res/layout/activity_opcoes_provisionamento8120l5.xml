@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ECF0F1"
-    tools:context=".eg8120l5.OpcoesProvisionamento8120l5">
+    tools:context=".obsoletos.OpcoesProvisionamento8120l5">
 
     <TextView
         android:id="@+id/textView"

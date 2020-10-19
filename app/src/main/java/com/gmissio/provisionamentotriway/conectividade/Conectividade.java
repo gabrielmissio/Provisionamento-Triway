@@ -1,4 +1,4 @@
-package com.gmissio.provisionamentotriway.Conectividade;
+package com.gmissio.provisionamentotriway.conectividade;
 
 import android.app.Activity;
 import android.content.Context;
